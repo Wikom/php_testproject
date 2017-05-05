@@ -12,8 +12,8 @@ Es wird zusätzlich eine flexibel einsetzbare Helper-Klasse benötigt, die besti
 Das Projekt besteht aus folgenden Aufgabenbereichen:
 ----------------------------------------------------
 * Anlegen einer geeigneten DB-Struktur. SQL-File zum Anlegen der DB bitte im Ordner 'data' ablegen. Als DB bitte Postgres verwenden.
-* Erstellen eines Webformulars und des benötigten JS-Codes. Hier ist die Verwendung von Bibliotheken (z.B. jQuery, ExtJs, jQueryUI etc.) erlaubt.
-* Erstellen einer addSending.php mit einer Funktion zum Speichern der Formular-Eingaben in der DB
+* Erstellen eines Webformulars und des benötigten JS-Codes. Die Verwendung von Bibliotheken (je nach Vorlieben z.B. jQuery, ExtJs, jQueryUI etc.) ist hier ausdrücklicht erwünscht.
+* Erstellen eines PHP-API-Endpunktes mit einer Funktion zum Speichern der Formular-Eingaben in der DB.
 * Erstellen von Klassen für die Sendungsarten. Die Klassen haben u.a. eine Methode save(), um das Objekt in der DB anzulegen. (Funktionen zum laden aus der DB müssen nicht umgesetzt werden)
 * Erstellen der Helper-Klasse CourierHelper, der man Sendungen übergeben kann und die zu den übergebenen Sendungen verschiedene Informationen zurückliefert (Details s.u.).
 
@@ -90,7 +90,6 @@ Vorgaben
 * Repository forken und nach Fertigstellung einen Pull-Request stellen.
 * Mit mehreren kleineren Commits arbeiten, damit wir das Vorgehen nachvollziehen können.
 * Daten werden in Postgres-DB gespeichert.
-* Für PHP keine externeren Bibliotheken bzw. Composer packages verwenden
-* Bei JS ist die Verwendung von Bibliotheken erlaubt
+* Bei JS ist die sinnvolle Verwendung von Bibliotheken angeraten (z.B. sollte kein DatePicker von Hand programmiert werden...)
 * Ergebnis in git Repository ablegen
 * SQL File für DB in Ordner data ablegen
