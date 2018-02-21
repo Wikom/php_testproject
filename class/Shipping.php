@@ -23,6 +23,10 @@ class Shipping {
         $this->weight = $weight;
     }
     
+    /**
+     * Saves the Shipping Object into Database
+     * @return result
+     */
     function save() {
         $database = new Database();
         
@@ -33,11 +37,6 @@ class Shipping {
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
             [$this->type, $this->trackingId, $this->name, $this->date, $this->size_h, $this->size_l, $this->size_w, $this->weight]);
         
-        if($result !== FALSE) {
-            echo("Sendung an ".$this->name." wurde erfasst. Vorausichtliche Zustellung am ..., Preis: ...");
-        }
-        else {
-            echo("Fehler in der Verarbeitung!");
-        }
+        return $result;
     }
 }

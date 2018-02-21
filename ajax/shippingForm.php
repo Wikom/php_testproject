@@ -37,6 +37,11 @@ if($_GET["action"] && $_GET["action"] == "submit") {
     
     //TODO: Check Type, insert deliverydate
     
-    $shipping->save();
+    if($shipping->save() !== FALSE) {
+        echo("Sendung an ".$deliveryname." wurde erfasst. Vorausichtliche Zustellung am ..., Preis: ...");
+    }
+    else {
+        echo("Fehler in der Verarbeitung!");
+    }
     
 }
