@@ -4,7 +4,7 @@
 Gebe uns noch ein paar Details mit<br><br>
 <div id="sendform">
 
-<b>Sendungstyp:</b>{html_options id=types name=shipping_types options=$shipping_types selected=$shipping_types.name}<br>
+<b>Sendungstyp:</b>{html_options id=types name=shipping_types options=$shipping_types}<br>
 <b>Absendedatum:</b><input type="text" id="datepicker"><br>
 <b>TrackingId:</b><input type="text" id="trackingid"><br>
 <b>Empf&auml;ngername:</b><input type="text" id="deliveryname"><br><br>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2018-02-21 16:19:20
+<?php /* Smarty version 2.6.31, created on 2018-02-21 16:39:45
          compiled from index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'index.tpl', 1, false),array('function', 'html_options', 'index.tpl', 7, false),)), $this); ?>
@@ -13,7 +13,7 @@ unset($_smarty_tpl_vars);
 Gebe uns noch ein paar Details mit<br><br>
 <div id="sendform">
 
-<b>Sendungstyp:</b><?php echo smarty_function_html_options(array('id' => 'types','name' => 'shipping_types','options' => $this->_tpl_vars['shipping_types'],'selected' => $this->_tpl_vars['shipping_types']['name']), $this);?>
+<b>Sendungstyp:</b><?php echo smarty_function_html_options(array('id' => 'types','name' => 'shipping_types','options' => $this->_tpl_vars['shipping_types']), $this);?>
 <br>
 <b>Absendedatum:</b><input type="text" id="datepicker"><br>
 <b>TrackingId:</b><input type="text" id="trackingid"><br>
