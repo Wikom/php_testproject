@@ -26,7 +26,7 @@ $( document ).ready(function() {
     		url: "ajax/shippingForm.php?action=submit"
     	})
     	.done(function(data) {
-    		console.log(data);
+    		$('#noticeresult').html(data);
     	});
     	
     	

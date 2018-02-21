@@ -1,6 +1,5 @@
 <?php
-
-require 'Database.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/DevProject/class/Database.php');
 
 class Shipping {
     
@@ -28,11 +27,17 @@ class Shipping {
         $database = new Database();
         
         // Query Build
-        $query = ('INSERT INTO shippings (type, tracking_id, customer_name, entry_date, size_height, size_length, size_width, weight)
-                    VALUES ('.$this->type.', '.$this->trackingId.', '.$this->name.', '.$this->date.', '.$this->size_h.',
-                            '.$this->size_l.', '.$this->size_w.', '.$this->weight.')');
+
+        $result = pg_query_params($database->dbConnection, 
+            'INSERT INTO shippings (type, tracking_id, customer_name, entry_date, size_height, size_length, size_width, weight)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+            [$this->type, $this->trackingId, $this->name, $this->date, $this->size_h, $this->size_l, $this->size_w, $this->weight]);
         
-        $database->dbConnection();
-        pg_query($query);
+        if($result !== FALSE) {
+            echo("Sendung an ".$this->name." wurde erfasst. Vorausichtliche Zustellung am ..., Preis: ...");
+        }
+        else {
+            echo("Fehler in der Verarbeitung!");
+        }
     }
 }

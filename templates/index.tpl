@@ -17,4 +17,6 @@ Gebe uns noch ein paar Details mit<br><br>
 <button id="submit">Absenden</button>
 </div>
 
+<div id="noticeresult"></div>
+
 {include file="footer.tpl"}

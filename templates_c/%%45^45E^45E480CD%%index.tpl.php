@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2018-02-21 15:41:26
+<?php /* Smarty version 2.6.31, created on 2018-02-21 16:19:20
          compiled from index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'index.tpl', 1, false),array('function', 'html_options', 'index.tpl', 7, false),)), $this); ?>
@@ -26,6 +26,8 @@ Gebe uns noch ein paar Details mit<br><br>
 
 <button id="submit">Absenden</button>
 </div>
+
+<div id="noticeresult"></div>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "footer.tpl", 'smarty_include_vars' => array()));

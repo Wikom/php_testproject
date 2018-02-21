@@ -1,6 +1,6 @@
 <?php
 
-require 'configs/database.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/DevProject/configs/database.php');
 
 class Database {
     
@@ -11,7 +11,7 @@ class Database {
     public $dbConnection;
     
     function __construct() {
-        $dbConnection = pg_connect("  host=".DB_HOST."
+        $this->dbConnection = pg_connect("  host=".DB_HOST."
                         dbname=".DB_NAME."
                         user=".DB_USER."
                         password=".DB_PASSWORD."")

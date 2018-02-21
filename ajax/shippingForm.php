@@ -1,6 +1,6 @@
 <?php
 
-require 'Shipping.php';
+require '../class/Shipping.php';
 
 // Prepare ajax endoint
 if($_GET["action"] && $_GET["action"] == "submit") {
@@ -27,13 +27,13 @@ if($_GET["action"] && $_GET["action"] == "submit") {
     
     // All required Fields filled
     if(!$type || !$date || !$tracking || !$deliveryname || !$size_l || !$size_w || !$size_h || !$weight) {
-        die("Sie m&uuml;ssen alle Felder ausf&ouml;llen!");
+        die("Sie m&uuml;ssen alle Felder ausf&uuml;llen!");
     }
     
     // TODO: Validate Fields 
     
     // Save to DB
-    $shipping = new Shipping($type, $date, $name, $tracking, $size_w, $size_h, $size_l, $weight);
+    $shipping = new Shipping($type, $date, $deliveryname, $tracking, $size_w, $size_h, $size_l, $weight);
     
     //TODO: Check Type, insert deliverydate
     

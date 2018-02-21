@@ -1,8 +1,8 @@
 <?php
 
 /* Include Dependencies */
-require 'libs/Smarty.class.php';
-require 'class/Database.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/DevProject/libs/Smarty.class.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/DevProject/class/Database.php');
 
 $database = new Database();
 
